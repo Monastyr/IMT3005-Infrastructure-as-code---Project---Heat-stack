@@ -53,10 +53,6 @@ parameters:
       - 22
       - 80
       - 443
-  github_ssh_private_key:
-    type: string
-    description: Private key used to authenticate github
-    default: |
  
 resources:
   # Parsing port parameters into lists that repeat can iterate over:
