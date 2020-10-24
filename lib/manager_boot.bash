@@ -29,7 +29,7 @@ echo "$(/opt/puppetlabs/bin/facter networking.ip) $(hostname).node.consul $(host
 
 # configure Puppet to run every five minutes
 /opt/puppetlabs/bin/puppet config set server manager.node.consul --section main
-/opt/puppetlabs/bin/puppet config set runinterval 300 --section main
+/opt/puppetlabs/bin/puppet config set runinterval 120 --section main
 
 # configure puppetserver to accept all new agents automatically
 /opt/puppetlabs/bin/puppet config set autosign true --section master
@@ -41,7 +41,7 @@ cat <<EOF > /var/tmp/r10k.pp
 class { 'r10k':
   sources => {
     'puppet' => {
-      'remote'  => 'https://github.com/Monastyr/control-repo.git',
+      'remote'  => 'https://github.com/Monastyr/control-repo-group11.git',
       'basedir' => '/etc/puppetlabs/code/environments',
       'prefix'  => false,
     },
