@@ -54,6 +54,9 @@ parameters:
       - 80
       - 443
       - 8000
+      - 8080
+      - 8081
+      - 3306
  
 resources:
   # Parsing port parameters into lists that repeat can iterate over:
