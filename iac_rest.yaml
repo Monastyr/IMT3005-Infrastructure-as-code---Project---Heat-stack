@@ -73,7 +73,7 @@ resources:
             key_name:          { get_param: key_name }
             server_name:       ws1
             image:             { get_param: image_linux }  
-            flavor:            m1.medium
+            flavor:            m1.tiny
             sec_group_linux:   { get_param: sec_group_linux }  
             public_net:        { get_param: public_net }  
             admin_net:         { get_param: admin_net }
@@ -86,7 +86,7 @@ resources:
             key_name:          { get_param: key_name }
             server_name:       ws2
             image:             { get_param: image_linux }  
-            flavor:            m1.medium
+            flavor:            m1.tiny
             sec_group_linux:   { get_param: sec_group_linux }  
             public_net:        { get_param: public_net }  
             admin_net:         { get_param: admin_net }
@@ -99,7 +99,46 @@ resources:
             key_name:          { get_param: key_name }
             server_name:       ws3
             image:             { get_param: image_linux }  
-            flavor:            m1.medium
+            flavor:            m1.tiny
+            sec_group_linux:   { get_param: sec_group_linux }  
+            public_net:        { get_param: public_net }  
+            admin_net:         { get_param: admin_net }
+            admin_subnet:      { get_param: admin_subnet }
+            manager_ip:        { get_param: manager_ip }
+            
+   database_1:
+      type: lib/managed_linux_server.yaml
+      properties:
+            key_name:          { get_param: key_name }
+            server_name:       db1
+            image:             { get_param: image_linux }  
+            flavor:            m1.small
+            sec_group_linux:   { get_param: sec_group_linux }  
+            public_net:        { get_param: public_net }  
+            admin_net:         { get_param: admin_net }
+            admin_subnet:      { get_param: admin_subnet }
+            manager_ip:        { get_param: manager_ip }
+            
+   database_2:
+      type: lib/managed_linux_server.yaml
+      properties:
+            key_name:          { get_param: key_name }
+            server_name:       db2
+            image:             { get_param: image_linux }  
+            flavor:            m1.small
+            sec_group_linux:   { get_param: sec_group_linux }  
+            public_net:        { get_param: public_net }  
+            admin_net:         { get_param: admin_net }
+            admin_subnet:      { get_param: admin_subnet }
+            manager_ip:        { get_param: manager_ip }
+            
+    database_3:
+      type: lib/managed_linux_server.yaml
+      properties:
+            key_name:          { get_param: key_name }
+            server_name:       db3
+            image:             { get_param: image_linux }  
+            flavor:            m1.small
             sec_group_linux:   { get_param: sec_group_linux }  
             public_net:        { get_param: public_net }  
             admin_net:         { get_param: admin_net }
