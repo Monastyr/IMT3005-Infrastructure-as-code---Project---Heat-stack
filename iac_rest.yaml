@@ -106,7 +106,7 @@ resources:
             admin_subnet:      { get_param: admin_subnet }
             manager_ip:        { get_param: manager_ip }
             
-   database_1:
+  database_1:
       type: lib/managed_linux_server.yaml
       properties:
             key_name:          { get_param: key_name }
@@ -119,7 +119,7 @@ resources:
             admin_subnet:      { get_param: admin_subnet }
             manager_ip:        { get_param: manager_ip }
             
-   database_2:
+  database_2:
       type: lib/managed_linux_server.yaml
       properties:
             key_name:          { get_param: key_name }
@@ -132,7 +132,7 @@ resources:
             admin_subnet:      { get_param: admin_subnet }
             manager_ip:        { get_param: manager_ip }
             
-    database_3:
+  database_3:
       type: lib/managed_linux_server.yaml
       properties:
             key_name:          { get_param: key_name }
