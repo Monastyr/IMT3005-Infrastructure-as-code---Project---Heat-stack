@@ -118,4 +118,3 @@ resources:
             admin_net:         { get_param: admin_net }
             admin_subnet:      { get_param: admin_subnet }
             manager_ip:        { get_param: manager_ip } 
-

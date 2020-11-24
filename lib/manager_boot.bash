@@ -41,7 +41,7 @@ cat <<EOF > /var/tmp/r10k.pp
 class { 'r10k':
   sources => {
     'puppet' => {
-      'remote'  => 'https://github.com/Monastyr/testMODULE.git',
+      'remote'  => 'https://github.com/Monastyr/testMODULE',
       'basedir' => '/etc/puppetlabs/code/environments',
       'prefix'  => false,
     },
